@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+html, body{height: 100%;}
+
+body {
+	margin: 0px;
+	background-image: url("leaf.png");
+	background-repeat: repeat;
+}
+
+/* Header Styles */
+
+body header {
+	display: flex;
+	background-color: rgb(16,21,147);
+}
+
+body header img {
+	width: 50px;
+	height: 50px;
+	padding: 10px 10px;
+}
+
+body header p {
+	color: white;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-left: 10px;
+	font-family: 'Charmonman', cursive;
+}
+
+/* Jumbotron Styles */
+
+#jumbotron {
+	background-color: rgb(51,177,255);
+}
+
+#jumbotron div {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#jumbotron div img {
+	margin: auto;
+}
+
+#jumbotron div img.sideIcon {
+	width: 100px;
+	height: 100px;
+}
+
+#jumbotron div img.centerIcon {
+	width: 180px;
+	height: 240px;
+	border-radius: 50%;
+}
+
+#jumbotron p {
+	font-size: 30px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	color: rgba(255,255,255,0.7);
+	padding-bottom: 20px;
+}
+
+/* Aside Styles */
+
+#mainMenu {
+	width: 300px;
+	height: 650px;
+	float: left;
+	background-color: rgb(130,196,136);
+	font-size: 20px;
+}
+
+#mainMenu ul {
+	font-family: 'Ubuntu', sans-serif;
+	list-style-type: none;
+}
+#mainMenu li {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#mainMenu ul ul li:before {
+	list-style-type: none;
+	content: "-  ";
+}
+#resources {
+	width: 300px;
+	height: 650px;
+	float: right;
+	background-color: rgb(130,196,136);
+	font-size: 20px;
+}
+#resources p {
+	font-family: 'Patua One', cursive;
+	text-decoration: underline;
+}
+#resources ul {
+	font-family: 'Ubuntu', sans-serif;
+	list-style-type: none;
+}
+#resources li {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#resources nav ul li {
+	padding-bottom: 5px;
+}
+/* Article Styles */
+
+#biography, #tips, #contactInfo {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#biography {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+article {
+	font-family: 'Assistant', sans-serif;
+	font-weight: bold;
+}
+article > h1 {
+	text-align: center;
+}
+article > ol {
+	text-align: left;
+	list-style-position: inside;
+}
+
+/* Contact Info Styles */
+
+#contactInfo {
+	padding-bottom: 70px;
+}
+
+/* Hyper-link Styles */
+a {
+	color: blue;
+}
+a:hover {
+	color: red;
+}
+
+/* Footer Styles */
+
+footer {
+	display: flex;
+	height: 50px;
+	background-color: rgb(16,21,147);
+}
+footer a {
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-left: 30px;
+	color: white;
+}
+/* Tablet Screen Styles */
+@media screen and (max-width: 991px) {
+	#mainMenu {
+		display: flex;
+		float: none;
+		width: 100%;
+		height: auto;
+		background-color: rgb(48,161,56);
+	}
+	#mainMenu > nav > ul > div.links {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 1fr;
+		justify-content: space-between;
+		align-items: center;
+	}
+	#mainMenu > nav > ul > li > ul {
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		justify-content: space-between;
+		align-items: center;
+	}
+	article {
+		width: 100%;
+	}
+	#resources {
+		float: none;
+		width: 100%;
+		height: auto;
+	}
+	#resources p {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	#resources > nav > ul {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 1fr 1fr;
+		justify-content: space-between;
+		align-items: center;
+		margin: auto;
+	}
+}
+/* Phone Screen Styles */
+@media screen and (max-width: 767px) {
+	body {
+		background-image: url("leaf_brown.png");
+		background-repeat: repeat;
+	}
+	body header {
+		background-color: rgb(102,27,0);
+	}
+	#jumbotron {
+		background-color: rgb(233,131,58);
+	}
+	#mainMenu {
+		background-color: rgb(233,207,58);
+	}
+	#resources {
+		background-color: rgb(157,52,16);
+	}
+	body footer {
+		background-color: rgb(102,27,0);
+	}
+}
+
